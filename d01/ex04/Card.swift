@@ -21,7 +21,7 @@ class Card: NSObject {
         return "\(color.rawValue)\(value)"
     }
     
-    override func isEqual(to: Any?) -> Bool {
+    override func isEqual(_ to: Any?) -> Bool {
         if let card = to as? Card {
             return self.color == card.color && self.value == card.value
         }
