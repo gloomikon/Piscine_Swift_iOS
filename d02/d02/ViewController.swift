@@ -8,8 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+var info: [(String, String, String)] = [
+    ("КолумбиЯ", "Murdered", "13 January 2069  11:25:13"),
+    ("Moonsinger", "Slaughtered", "04 January 2053 13:22:33"),
+    ("MrAmsterdam", "Suicide", "06 November 2044 00:00:01")
+]
 
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var table: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return info.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! InfoTable
+        cell.info = info[indexPath.row]
+        cell.nameLbl?.numberOfLines = 0
+        cell.descriptionLbl?.numberOfLines = 0
+        cell.dateLbl?.numberOfLines = 0
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 100
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
