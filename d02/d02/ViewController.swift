@@ -8,15 +8,19 @@
 
 import UIKit
 
-var info: [(String, String, String)] = [
-    ("КолумбиЯ", "Murdered", "13 January 2069  11:25:13"),
-    ("Moonsinger", "Slaughtered", "04 January 2053 13:22:33"),
-    ("MrAmsterdam", "Suicide", "06 November 2044 00:00:01")
-]
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
     
+    var info: [(String, String, String)] = [
+        ("КолумбиЯ", "Murdered", "13 January 2069  11:25:13"),
+        ("Moonsinger", "Slaughtered", "04 January 2053 13:22:33"),
+        ("MrAmsterdam", "Suicide", "06 November 2044 00:00:01")
+        ] {
+        didSet {
+            table.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return info.count
@@ -31,6 +35,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 100
         return cell
+    }
+    
+    @IBAction func unWindSegue(segue: UIStoryboardSegue) {
     }
     
     override func viewDidLoad() {
