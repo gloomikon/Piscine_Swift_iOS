@@ -19,21 +19,21 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         scrollView.addSubview(imageView!)
         scrollView.contentSize = (imageView?.frame.size)!
         scrollView.maximumZoomScale = 100
-        scrollView.minimumZoomScale = 0.1
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewWillLayoutSubviews() {
+        var minZoom = min(self.view.bounds.size.width / imageView!.bounds.size.width, self.view.bounds.size.height / imageView!.bounds.size.height);
+        
+        if (minZoom > 1.0) {
+            minZoom = 1.0;
+        }
+        
+        scrollView.minimumZoomScale = minZoom;
+        scrollView.zoomScale = minZoom;
     }
-    */
 
 }
