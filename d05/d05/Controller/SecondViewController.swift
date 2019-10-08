@@ -58,7 +58,6 @@ class SecondViewController: UIViewController {
         let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01));
         mapView.setRegion(region, animated: false)
-        mapView.mapType = MKMapType.standard
         mapView.showsCompass = true
         mapView.showsScale = true
         mapView.showsUserLocation = true
