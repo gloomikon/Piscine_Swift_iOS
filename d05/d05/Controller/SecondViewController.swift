@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
+class MyPointAnnotation : MKPointAnnotation {
+    var pinTintColor: UIColor?
+}
+
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -26,10 +30,6 @@ class SecondViewController: UIViewController {
         autoLocation()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        gotoCoords(latitude: 48.896661, longitude: 2.318493)
-    }
-    
     @IBAction func updateMapType(_ sender: UISegmentedControl) {
         switch sender.titleForSegment(at: sender.selectedSegmentIndex) {
         case "Standard":
@@ -44,8 +44,14 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func updateLocation(_ sender: Any) {
-        let region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        mapView.setRegion(region, animated: true)
+        if (CLLocationManager.authorizationStatus() != .authorizedWhenInUse) {
+            let alert = UIAlertController(title: "Error", message: "Can not update location because application has no permission", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            let region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     func gotoCoords(latitude: Double, longitude: Double) {
@@ -60,31 +66,41 @@ class SecondViewController: UIViewController {
     
     private func addPins() {
         for place in places {
-            let pin = MKPointAnnotation()
+            let pin = MyPointAnnotation()
             pin.coordinate = CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)
             pin.title = place.name
             pin.subtitle = place.description
+            pin.pinTintColor = .green
             mapView.addAnnotation(pin)
         }
     }
-
-}
-
-extension SecondViewController: MKMapViewDelegate {
-    
 }
 
 extension SecondViewController: CLLocationManagerDelegate {
-
-
     private func autoLocation() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.distanceFilter = 10
         locationManager.startUpdatingLocation()
-        if (CLLocationManager.authorizationStatus() != .authorizedWhenInUse) {
-            autoLocationBtn.isHidden = true
+    }
+}
+
+extension SecondViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil
         }
+        let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin");
+        view.canShowCallout = true;
+        view.calloutOffset = CGPoint(x: -5, y: 5);
+        for place in places {
+            if (place.latitude == annotation.coordinate.latitude
+            && place.longitude == annotation.coordinate.longitude) {
+                view.pinTintColor = place.color;
+                break;
+            }
+        }
+        return (view);
     }
 }

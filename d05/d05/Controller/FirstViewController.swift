@@ -12,7 +12,6 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -28,7 +27,7 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.tabBarController?.viewControllers![1] as! SecondViewController
+        let vc = self.tabBarController?.viewControllers![0] as! SecondViewController
         self.tabBarController?.selectedViewController = vc
         vc.gotoCoords(latitude: places[indexPath.row].latitude, longitude: places[indexPath.row].longitude)
     }
