@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController {
+    var motionManager = CMMotionManager()
     var animator: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
     var boundaries: UICollisionBehavior!
@@ -16,7 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "image")!)
         
         // Gravity
         animator = UIDynamicAnimator(referenceView: self.view)
@@ -33,6 +35,12 @@ class ViewController: UIViewController {
         self.bounce = UIDynamicItemBehavior(items: [])
         self.bounce.elasticity = 0.5
         animator.addBehavior(self.bounce)
+        
+        // Accelerometer
+        if (motionManager.isAccelerometerAvailable) {
+            motionManager.accelerometerUpdateInterval = 0.3
+            motionManager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: updateVector)
+        }
     }
 
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
@@ -106,6 +114,12 @@ class ViewController: UIViewController {
             self.gravity.addItem(shape)
         default:
             break
+        }
+    }
+    
+    func updateVector(data: CMAccelerometerData?, error: Error?) -> Void {
+        if let d = data {
+            self.gravity.gravityDirection = CGVector(dx: d.acceleration.x, dy: d.acceleration.y)
         }
     }
 }
