@@ -47,9 +47,10 @@ class ViewController: UIViewController {
         // Add user interaction
         new.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(panAction)))
         new.addGestureRecognizer(UIPinchGestureRecognizer(target: self, action: #selector(pinchAction)))
+        new.addGestureRecognizer(UIRotationGestureRecognizer(target: self, action: #selector(rotationAction)))
     }
     
-    // User interaaction process
+    // User interaction process
     @objc func panAction(panGesture: UIPanGestureRecognizer) {
         let shape = panGesture.view as! Shape
         
@@ -75,8 +76,29 @@ class ViewController: UIViewController {
         case .changed:
             self.bounce.removeItem(shape)
             self.boundaries.removeItem(shape)
-            view.bounds.size.width *= pinGesture.scale
-            view.bounds.size.height *= pinGesture.scale
+            shape.bounds.size.width = shape.oldBounds.width * pinGesture.scale
+            shape.bounds.size.height = shape.oldBounds.height * pinGesture.scale
+            self.bounce.addItem(shape)
+            self.boundaries.addItem(shape)
+            self.animator.updateItem(usingCurrentState: shape)
+        case .ended:
+            self.gravity.addItem(shape)
+        default:
+            break
+        }
+    }
+    
+    @objc func rotationAction(rotationGesture: UIRotationGestureRecognizer) {
+        let shape = rotationGesture.view as! Shape
+        
+        switch rotationGesture.state {
+        case .began:
+            self.gravity.removeItem(shape)
+        case .changed:
+            self.bounce.removeItem(shape)
+            self.boundaries.removeItem(shape)
+            shape.transform = shape.transform.rotated(by: rotationGesture.rotation)
+            rotationGesture.rotation = 0
             self.bounce.addItem(shape)
             self.boundaries.addItem(shape)
             self.animator.updateItem(usingCurrentState: shape)

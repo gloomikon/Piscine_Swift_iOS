@@ -17,15 +17,16 @@ enum Shapes {
 
 
 class Shape: UIView {
-    var shape: Shapes
-    var color: UIColor
+    let shape: Shapes
+    let color: UIColor
     var path: UIBezierPath!
-    var itemBehavior: UIDynamicItemBehavior?
+    var oldBounds: CGRect!
     
     override init(frame: CGRect) {
         self.shape = Shapes.allShapes[Int(arc4random_uniform(UInt32(Shapes.allShapes.count)))]
         self.color = UIColor.random
         super.init(frame: frame)
+        self.oldBounds = self.bounds
         self.backgroundColor = UIColor(white: 1, alpha: 0)
     }
     
