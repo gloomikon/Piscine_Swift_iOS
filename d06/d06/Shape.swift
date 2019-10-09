@@ -15,35 +15,6 @@ enum Shapes {
     static let allShapes = [Circle, Square]
 }
 
-struct Data {
-    static let shapes = Shapes.allShapes
-    static let colors = [UIColor.red, UIColor.yellow, UIColor.green, UIColor.black, UIColor.gray, UIColor.orange, UIColor.cyan, UIColor.blue, UIColor.purple]
-}
-//
-//class Shape: UIView {
-//
-////    let shape: Shapes
-////    let color: UIColor
-//    var path: UIBezierPath!
-//
-//    init(origin: CGPoint) {
-////        self.shape = Data.shapes[Int(arc4random_uniform(UInt32(Data.shapes.count)))]
-////        self.color = Data.colors[Int(arc4random_uniform(UInt32(Data.colors.count)))]
-//        super.init(frame: CGRect(x: origin.x - 50, y: origin.y - 50, width: 100, height: 100))
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
-//
-//
-//    override func draw(_ rect: CGRect) {
-//        self.path = UIBezierPath(ovalIn: rect)
-//        UIColor.orange.setFill()
-//        path.fill()
-//    }
-//
-//}
 
 class Shape: UIView {
     var shape: Shapes
@@ -52,10 +23,10 @@ class Shape: UIView {
     var itemBehavior: UIDynamicItemBehavior?
     
     override init(frame: CGRect) {
-        self.shape = Data.shapes[Int(arc4random_uniform(UInt32(Data.shapes.count)))]
-        self.color = Data.colors[Int(arc4random_uniform(UInt32(Data.colors.count)))]
+        self.shape = Shapes.allShapes[Int(arc4random_uniform(UInt32(Shapes.allShapes.count)))]
+        self.color = UIColor.random
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = UIColor(white: 1, alpha: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,5 +37,19 @@ class Shape: UIView {
         self.path = self.shape == .Circle ? UIBezierPath(ovalIn: rect) : UIBezierPath(rect: rect)
         self.color.setFill()
         path.fill()
+    }
+    
+    // For good collision
+    override public var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        return .path
+    }
+    
+    override public var collisionBoundingPath: UIBezierPath {
+        if self.shape == .Circle {
+            let radius = min(self.bounds.size.width, self.bounds.size.height) / 2.0
+            return UIBezierPath(arcCenter: CGPoint.zero, radius: radius, startAngle: 0, endAngle: CGFloat(Double.pi * 2.0), clockwise: true)
+        } else {
+            return UIBezierPath(rect: CGRect(x: -self.bounds.width / 2, y:  -self.bounds.height / 2, width: self.bounds.width, height: self.bounds.height))
+        }
     }
 }

@@ -13,6 +13,7 @@
 		2AB026CB234CAF8100CBE527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB026C9234CAF8100CBE527 /* Main.storyboard */; };
 		2AB026CD234CAF8500CBE527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB026CC234CAF8500CBE527 /* Assets.xcassets */; };
 		2AB026D0234CAF8500CBE527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB026CE234CAF8500CBE527 /* LaunchScreen.storyboard */; };
+		2AE4A17A234E137D00B12540 /* UIColorRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A179234E137D00B12540 /* UIColorRandom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2AB026CC234CAF8500CBE527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB026CF234CAF8500CBE527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AB026D1234CAF8500CBE527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE4A179234E137D00B12540 /* UIColorRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorRandom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2AB026C5234CAF8100CBE527 /* AppDelegate.swift */,
 				2AB026C7234CAF8100CBE527 /* ViewController.swift */,
 				2AA50FC8234CCC1D00088869 /* Shape.swift */,
+				2AE4A179234E137D00B12540 /* UIColorRandom.swift */,
 				2AB026C9234CAF8100CBE527 /* Main.storyboard */,
 				2AB026CC234CAF8500CBE527 /* Assets.xcassets */,
 				2AB026CE234CAF8500CBE527 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE4A17A234E137D00B12540 /* UIColorRandom.swift in Sources */,
 				2AB026C8234CAF8100CBE527 /* ViewController.swift in Sources */,
 				2AA50FC9234CCC1D00088869 /* Shape.swift in Sources */,
 				2AB026C6234CAF8100CBE527 /* AppDelegate.swift in Sources */,
