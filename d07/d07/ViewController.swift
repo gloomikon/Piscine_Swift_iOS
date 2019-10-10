@@ -27,10 +27,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func makeRequest(_ sender: UIButton) {
-        self.bot?.textRequest(inputText.text!, successHandler: successHandler, failureHandle: {
-            (err) in
-            print(err.localizedDescription)
-        })
+        if (inputText.text != "") {
+            self.bot?.textRequest(inputText.text!, successHandler: successHandler, failureHandle: {
+                (err) in
+                print(err.localizedDescription)
+            })
+        } else {
+            displayError(message: "Field can not be blank")
+        }
     }
     
     private func successHandler(response : Response) {
