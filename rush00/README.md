@@ -7,4 +7,4 @@ off all events, filtered by kind.
 `42 API`, `Protocols`, `Requests`, `JSON`
   
 **Click on image to see video demonstration:**  
-[![Calculator demonstration](https://firebasestorage.googleapis.com/v0/b/project-6823619469149101723.appspot.com/o/42api.png?alt=media&token=c6dd5bba-bd2e-41d9-8009-74124f8824d0)](https://www.youtube.com/watch?v=XSHVK8dHVts)
+[![Profile manager demonstration](https://firebasestorage.googleapis.com/v0/b/project-6823619469149101723.appspot.com/o/42api.png?alt=media&token=c6dd5bba-bd2e-41d9-8009-74124f8824d0)](https://www.youtube.com/watch?v=XSHVK8dHVts)
