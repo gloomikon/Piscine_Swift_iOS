@@ -1,9 +1,10 @@
 {
   "name": "mzhurba2019",
   "version": "0.1.0",
-  "summary": "A short description of mzhurba2019.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/gloomikon/mzhurba2019",
+  "summary": "Article Manager",
+  "swift_versions": "4.0.0",
+  "description": "Educational  project of Piscine Swift",
+  "homepage": "https://github.com/gloomikon/Piscine_Swift_iOS/tree/master/d08/mzhurba2019",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -15,8 +16,12 @@
     "git": "https://github.com/gloomikon/mzhurba2019.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/gloomikon",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "mzhurba2019/Classes/**/*"
+  "source_files": "mzhurba2019/Classes/**/*",
+  "resources": "mzhurba2019/Assets/*",
+  "frameworks": "CoreData",
+  "swift_version": "4.0.0"
 }

@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00371253604E73AD4B57A599ED7072F2 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82229CB16275C0B863741D1396528118 /* ReplaceMe.swift */; };
-		0196FE05C7D056F6210F31B2744C8427 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		0E034BA0BDAE3AE738EE00C04F0C0B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		47BC1B6D221B240399B55299A480171D /* mzhurba2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E836451EA4468954D451CD9912594107 /* mzhurba2019-dummy.m */; };
+		0196FE05C7D056F6210F31B2744C8427 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A6C3B1B94B8C68F11070716C2E0A7 /* Foundation.framework */; };
+		348A40482E57CA994AC3D3D0DFF98958 /* mzhurba2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC306E39505E5E32FC22C697CD7E385 /* mzhurba2019-dummy.m */; };
+		39CA5DC44B073739B37EAFF199EBD215 /* mzhurba2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 848F06B1C0963B4A27433693998B7E24 /* mzhurba2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73279CBE434EC1033B1FC7700E704EA7 /* Pods-mzhurba2019_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F58A2112AC9A39805902DE2CDEDF6DB7 /* Pods-mzhurba2019_Example-dummy.m */; };
-		8152ABE9586EBAA073E7A08716FEE773 /* mzhurba2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18436409C34AF7F7927764464B5B2AAE /* mzhurba2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F9AF8CFA61BB3A065670E2C2ADEA01B /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBEEC3EA3898BFFE450DC7B9662714 /* Article+CoreDataClass.swift */; };
 		94B8C874D0CCAAC5C0F65FF6704E52EF /* Pods-mzhurba2019_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A64222704718D7E7A21D746ED23CFA4 /* Pods-mzhurba2019_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9870E74B6ECCAC4977AC492A005E55A7 /* Pods-mzhurba2019_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D55DBE08521C47526A827BBD50D1522A /* Pods-mzhurba2019_Tests-dummy.m */; };
-		DD9F3E3334E9FE9B69F8FF12E53B7EDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		99C02A6F9893D0B1E8F7128391B10113 /* article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA1F7406A23A24CCBAADB3638AE3C0A2 /* article.xcdatamodeld */; };
+		9F3BD73857C24C800AC44B3D9114004D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D42E7A79A85F706E2F7099E38216AE /* ReplaceMe.swift */; };
+		BB5D7DB5C72C78291BFB7808214F63C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A6C3B1B94B8C68F11070716C2E0A7 /* Foundation.framework */; };
+		C2323724DD4E379B4C5DC1FEF31CBFB2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13E37530B47F5DA0E598490887362E7 /* CoreData.framework */; };
+		CD608173181C77DB61C48B53A79E141E /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B4EEFFAF24C0CF93F1EE6864DA8F3E /* ArticleManager.swift */; };
+		DD9F3E3334E9FE9B69F8FF12E53B7EDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A6C3B1B94B8C68F11070716C2E0A7 /* Foundation.framework */; };
 		E3B5C508AA9CF49214B6D9B44C2A6FBD /* Pods-mzhurba2019_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFE99BDD26EB99D78E0B5C6EEC32857B /* Pods-mzhurba2019_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBC5B2C6F4E08BBB3DA9177687463754 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531343C0C146F505BC576F922AF07631 /* Article+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,35 +45,40 @@
 		00DADCC41F088FED5C57B7ECBE08810F /* Pods-mzhurba2019_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mzhurba2019_Tests-Info.plist"; sourceTree = "<group>"; };
 		09A5C26B6148C2C0A71347369F9F8CD5 /* Pods-mzhurba2019_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mzhurba2019_Example.modulemap"; sourceTree = "<group>"; };
 		0B010C6FF5C3EC627BF47D094C6A58FE /* Pods-mzhurba2019_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mzhurba2019_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1082DB920CCD8AE9E569EEB3FB85B839 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		1829455923B8CB32A4810F817EACCFD0 /* mzhurba2019.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = mzhurba2019.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		18436409C34AF7F7927764464B5B2AAE /* mzhurba2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mzhurba2019-umbrella.h"; sourceTree = "<group>"; };
+		0F053AC674D1EF26C1506C18C23A9E86 /* mzhurba2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "mzhurba2019-Info.plist"; sourceTree = "<group>"; };
+		1A2A41634D66B6AE1F53277458171A80 /* mzhurba2019-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mzhurba2019-prefix.pch"; sourceTree = "<group>"; };
+		1AC306E39505E5E32FC22C697CD7E385 /* mzhurba2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "mzhurba2019-dummy.m"; sourceTree = "<group>"; };
 		1BFB9D1CAFB280D39CB6C3AB6B02729D /* Pods-mzhurba2019_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mzhurba2019_Example-frameworks.sh"; sourceTree = "<group>"; };
-		2A57A5D19E0E701A303AD908E3979162 /* mzhurba2019.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = mzhurba2019.xcconfig; sourceTree = "<group>"; };
 		30472DD0BD987000BA75276E7270267A /* Pods-mzhurba2019_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mzhurba2019_Tests.modulemap"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3227728B8DDE58237DC07A3B60D3FF3B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3C8CEBBB910EEB75957B32F8F97B5684 /* Pods-mzhurba2019_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mzhurba2019_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		40FA1C14DEA6EFC6E2907EF469202835 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		42D42E7A79A85F706E2F7099E38216AE /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = mzhurba2019/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		431EAFE04896CF5B2A400418D83A4FDA /* mzhurba2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = mzhurba2019.framework; path = mzhurba2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4800DCD10236F09580CDE1B45B09903B /* article.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = article.xcdatamodel; sourceTree = "<group>"; };
+		531343C0C146F505BC576F922AF07631 /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Article+CoreDataProperties.swift"; path = "mzhurba2019/Classes/Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B39B88513F8846EDFB87BF51B618163 /* mzhurba2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = mzhurba2019.modulemap; sourceTree = "<group>"; };
+		669F7E9A9EA476CA0172B4D93F4FDE3D /* mzhurba2019.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = mzhurba2019.xcconfig; sourceTree = "<group>"; };
 		6DCF1F8A30D498F9508365FAB43F69E1 /* Pods-mzhurba2019_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mzhurba2019_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6E9927C50E677678FC9350CDC92E625D /* mzhurba2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "mzhurba2019-Info.plist"; sourceTree = "<group>"; };
-		82229CB16275C0B863741D1396528118 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = mzhurba2019/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		8167C9211C3EDB3D0E361453D7A60CE3 /* mzhurba2019.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = mzhurba2019.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		848F06B1C0963B4A27433693998B7E24 /* mzhurba2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mzhurba2019-umbrella.h"; sourceTree = "<group>"; };
 		9A64222704718D7E7A21D746ED23CFA4 /* Pods-mzhurba2019_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mzhurba2019_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9CA3CBBA8D14396A6034EF4DC5DA864C /* Pods-mzhurba2019_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mzhurba2019_Example-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DF439297AEF18C40C4E72C88ACF92F5 /* mzhurba2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = mzhurba2019.modulemap; sourceTree = "<group>"; };
 		9F1E950BABBADBE344D4251DEAEE158C /* Pods_mzhurba2019_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mzhurba2019_Example.framework; path = "Pods-mzhurba2019_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8B813AE7F263CC6C161883F43219486 /* mzhurba2019-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mzhurba2019-prefix.pch"; sourceTree = "<group>"; };
+		A13E37530B47F5DA0E598490887362E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		AA3837A8C8AB00FB828CE60B76853CCE /* Pods-mzhurba2019_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mzhurba2019_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C1471CF1DB87EC3CAA3B8326C4F8F0C8 /* Pods-mzhurba2019_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mzhurba2019_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C2DBEEC3EA3898BFFE450DC7B9662714 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Article+CoreDataClass.swift"; path = "mzhurba2019/Classes/Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CC745E0BF5E4AC9CDD672B60D56E0312 /* Pods-mzhurba2019_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mzhurba2019_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CFE99BDD26EB99D78E0B5C6EEC32857B /* Pods-mzhurba2019_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mzhurba2019_Example-umbrella.h"; sourceTree = "<group>"; };
 		D55DBE08521C47526A827BBD50D1522A /* Pods-mzhurba2019_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mzhurba2019_Tests-dummy.m"; sourceTree = "<group>"; };
 		E483A419D590C2ACEA896D30BEE3DC42 /* Pods-mzhurba2019_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mzhurba2019_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E52A6C3B1B94B8C68F11070716C2E0A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E7F732712281AD3FAC45D808E726E470 /* Pods-mzhurba2019_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mzhurba2019_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E836451EA4468954D451CD9912594107 /* mzhurba2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "mzhurba2019-dummy.m"; sourceTree = "<group>"; };
 		EC21FCFC0C465E4237C22A4C423052F5 /* Pods_mzhurba2019_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mzhurba2019_Tests.framework; path = "Pods-mzhurba2019_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B4EEFFAF24C0CF93F1EE6864DA8F3E /* ArticleManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArticleManager.swift; path = mzhurba2019/Classes/ArticleManager.swift; sourceTree = "<group>"; };
 		F58A2112AC9A39805902DE2CDEDF6DB7 /* Pods-mzhurba2019_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mzhurba2019_Example-dummy.m"; sourceTree = "<group>"; };
-		FDCC8C7B03B69F62BD33E3BC164F65CF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +90,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D8CB93C95837E6BE480CE77CAF3A846 /* Frameworks */ = {
+		5AC4EA063D2A8881BD0E983951F3A0C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E034BA0BDAE3AE738EE00C04F0C0B89 /* Foundation.framework in Frameworks */,
+				C2323724DD4E379B4C5DC1FEF31CBFB2 /* CoreData.framework in Frameworks */,
+				BB5D7DB5C72C78291BFB7808214F63C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,18 +110,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		097FC38075924DEC0E5479ADC26FFF23 /* Support Files */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9DF439297AEF18C40C4E72C88ACF92F5 /* mzhurba2019.modulemap */,
-				2A57A5D19E0E701A303AD908E3979162 /* mzhurba2019.xcconfig */,
-				E836451EA4468954D451CD9912594107 /* mzhurba2019-dummy.m */,
-				6E9927C50E677678FC9350CDC92E625D /* mzhurba2019-Info.plist */,
-				A8B813AE7F263CC6C161883F43219486 /* mzhurba2019-prefix.pch */,
-				18436409C34AF7F7927764464B5B2AAE /* mzhurba2019-umbrella.h */,
+				429055C9436D20C513F0D334460D56BB /* iOS */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/mzhurba2019";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AE741A892EAF130798348DCBDCEB619 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA1F7406A23A24CCBAADB3638AE3C0A2 /* article.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		429055C9436D20C513F0D334460D56BB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A13E37530B47F5DA0E598490887362E7 /* CoreData.framework */,
+				E52A6C3B1B94B8C68F11070716C2E0A7 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		47EC61F28B5E897E9E98703533085654 /* Pods-mzhurba2019_Example */ = {
@@ -130,15 +152,26 @@
 			path = "Target Support Files/Pods-mzhurba2019_Example";
 			sourceTree = "<group>";
 		};
-		7038B93242E0A47C5FE970602BC431BF /* mzhurba2019 */ = {
+		4ED39186AE8B41B91D976E9F458BCFE4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				82229CB16275C0B863741D1396528118 /* ReplaceMe.swift */,
-				CFDB258BC306ADD9B7EB8E309AABEFAD /* Pod */,
-				097FC38075924DEC0E5479ADC26FFF23 /* Support Files */,
+				5B39B88513F8846EDFB87BF51B618163 /* mzhurba2019.modulemap */,
+				669F7E9A9EA476CA0172B4D93F4FDE3D /* mzhurba2019.xcconfig */,
+				1AC306E39505E5E32FC22C697CD7E385 /* mzhurba2019-dummy.m */,
+				0F053AC674D1EF26C1506C18C23A9E86 /* mzhurba2019-Info.plist */,
+				1A2A41634D66B6AE1F53277458171A80 /* mzhurba2019-prefix.pch */,
+				848F06B1C0963B4A27433693998B7E24 /* mzhurba2019-umbrella.h */,
 			);
-			name = mzhurba2019;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/mzhurba2019";
+			sourceTree = "<group>";
+		};
+		5950F61656DE244DF80A65BB90E2BDED /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				966F3C47ABCEDCF2E2C16E9991511388 /* mzhurba2019 */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		723020D16532987431F1B6195A145195 /* Targets Support Files */ = {
@@ -176,62 +209,45 @@
 			path = "Target Support Files/Pods-mzhurba2019_Tests";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		966F3C47ABCEDCF2E2C16E9991511388 /* mzhurba2019 */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				C2DBEEC3EA3898BFFE450DC7B9662714 /* Article+CoreDataClass.swift */,
+				531343C0C146F505BC576F922AF07631 /* Article+CoreDataProperties.swift */,
+				F1B4EEFFAF24C0CF93F1EE6864DA8F3E /* ArticleManager.swift */,
+				42D42E7A79A85F706E2F7099E38216AE /* ReplaceMe.swift */,
+				E9AB29244331F4A5788C829B5EC4E95B /* Pod */,
+				1AE741A892EAF130798348DCBDCEB619 /* Resources */,
+				4ED39186AE8B41B91D976E9F458BCFE4 /* Support Files */,
 			);
-			name = iOS;
+			name = mzhurba2019;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D954C0716C19FCB0E710B911BCA0DBDB /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				5950F61656DE244DF80A65BB90E2BDED /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				77ACA73B9CD67B067ED5F445B64B454B /* Products */,
 				723020D16532987431F1B6195A145195 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		CFDB258BC306ADD9B7EB8E309AABEFAD /* Pod */ = {
+		E9AB29244331F4A5788C829B5EC4E95B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				1082DB920CCD8AE9E569EEB3FB85B839 /* LICENSE */,
-				1829455923B8CB32A4810F817EACCFD0 /* mzhurba2019.podspec */,
-				FDCC8C7B03B69F62BD33E3BC164F65CF /* README.md */,
+				40FA1C14DEA6EFC6E2907EF469202835 /* LICENSE */,
+				8167C9211C3EDB3D0E361453D7A60CE3 /* mzhurba2019.podspec */,
+				3227728B8DDE58237DC07A3B60D3FF3B /* README.md */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D954C0716C19FCB0E710B911BCA0DBDB /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7038B93242E0A47C5FE970602BC431BF /* mzhurba2019 */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		81FFE118B44E8931DFDAFA2593CEE6E9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8152ABE9586EBAA073E7A08716FEE773 /* mzhurba2019-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A623EC313A6774E5714A08AE76BE4DAB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +261,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3B5C508AA9CF49214B6D9B44C2A6FBD /* Pods-mzhurba2019_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E16268BA920CC52CD11EBEE3CB8B8477 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39CA5DC44B073739B37EAFF199EBD215 /* mzhurba2019-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +315,12 @@
 		};
 		E0CF5FCB11694B54C4527D0AE13311BA /* mzhurba2019 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB56060074D7E3253FB1DA90468F3FC2 /* Build configuration list for PBXNativeTarget "mzhurba2019" */;
+			buildConfigurationList = 27A294FE3D704700F01D550C0C380A57 /* Build configuration list for PBXNativeTarget "mzhurba2019" */;
 			buildPhases = (
-				81FFE118B44E8931DFDAFA2593CEE6E9 /* Headers */,
-				957462C118A156C6F720019C42C100BC /* Sources */,
-				5D8CB93C95837E6BE480CE77CAF3A846 /* Frameworks */,
-				E1766F411541B272D40D2C8F75D11DD1 /* Resources */,
+				E16268BA920CC52CD11EBEE3CB8B8477 /* Headers */,
+				20043D9827057D76CA707C4B58CE587F /* Sources */,
+				5AC4EA063D2A8881BD0E983951F3A0C5 /* Frameworks */,
+				73464B5CD58EB5A71A8D2AA3765662BE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -336,14 +360,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CADD78E6A7B65939C0C6C9D896B593B3 /* Resources */ = {
+		73464B5CD58EB5A71A8D2AA3765662BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1766F411541B272D40D2C8F75D11DD1 /* Resources */ = {
+		CADD78E6A7B65939C0C6C9D896B593B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,12 +384,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		957462C118A156C6F720019C42C100BC /* Sources */ = {
+		20043D9827057D76CA707C4B58CE587F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47BC1B6D221B240399B55299A480171D /* mzhurba2019-dummy.m in Sources */,
-				00371253604E73AD4B57A599ED7072F2 /* ReplaceMe.swift in Sources */,
+				8F9AF8CFA61BB3A065670E2C2ADEA01B /* Article+CoreDataClass.swift in Sources */,
+				FBC5B2C6F4E08BBB3DA9177687463754 /* Article+CoreDataProperties.swift in Sources */,
+				99C02A6F9893D0B1E8F7128391B10113 /* article.xcdatamodeld in Sources */,
+				CD608173181C77DB61C48B53A79E141E /* ArticleManager.swift in Sources */,
+				348A40482E57CA994AC3D3D0DFF98958 /* mzhurba2019-dummy.m in Sources */,
+				9F3BD73857C24C800AC44B3D9114004D /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,37 +431,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04FC9A14DEAECB2EA8AB086DFAC888AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A57A5D19E0E701A303AD908E3979162 /* mzhurba2019.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/mzhurba2019/mzhurba2019-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/mzhurba2019/mzhurba2019-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/mzhurba2019/mzhurba2019.modulemap";
-				PRODUCT_MODULE_NAME = mzhurba2019;
-				PRODUCT_NAME = mzhurba2019;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4A23FFD7CB70A909BF5963E9C2E76FE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1471CF1DB87EC3CAA3B8326C4F8F0C8 /* Pods-mzhurba2019_Example.release.xcconfig */;
@@ -500,6 +497,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		9C31C6FD01D77CC136E7403D317F93B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669F7E9A9EA476CA0172B4D93F4FDE3D /* mzhurba2019.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/mzhurba2019/mzhurba2019-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/mzhurba2019/mzhurba2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/mzhurba2019/mzhurba2019.modulemap";
+				PRODUCT_MODULE_NAME = mzhurba2019;
+				PRODUCT_NAME = mzhurba2019;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		A2C9B4E8378275F5E6182C747E8FADF6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -692,9 +721,9 @@
 			};
 			name = Debug;
 		};
-		CEED516085903EBC10583348E55A1C91 /* Release */ = {
+		C05D25CFD343936AD5226192FD5B9048 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A57A5D19E0E701A303AD908E3979162 /* mzhurba2019.xcconfig */;
+			baseConfigurationReference = 669F7E9A9EA476CA0172B4D93F4FDE3D /* mzhurba2019.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -716,17 +745,25 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.0.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27A294FE3D704700F01D550C0C380A57 /* Build configuration list for PBXNativeTarget "mzhurba2019" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05D25CFD343936AD5226192FD5B9048 /* Debug */,
+				9C31C6FD01D77CC136E7403D317F93B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -754,16 +791,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB56060074D7E3253FB1DA90468F3FC2 /* Build configuration list for PBXNativeTarget "mzhurba2019" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04FC9A14DEAECB2EA8AB086DFAC888AD /* Debug */,
-				CEED516085903EBC10583348E55A1C91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA1F7406A23A24CCBAADB3638AE3C0A2 /* article.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4800DCD10236F09580CDE1B45B09903B /* article.xcdatamodel */,
+			);
+			name = article.xcdatamodeld;
+			path = mzhurba2019/Assets/article.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
