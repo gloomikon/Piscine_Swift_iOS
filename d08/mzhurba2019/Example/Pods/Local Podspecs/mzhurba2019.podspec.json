@@ -1,0 +1,22 @@
+{
+  "name": "mzhurba2019",
+  "version": "0.1.0",
+  "summary": "A short description of mzhurba2019.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gloomikon/mzhurba2019",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gloomikon": "gloomikon@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/gloomikon/mzhurba2019.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "mzhurba2019/Classes/**/*"
+}

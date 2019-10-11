@@ -1,0 +1,16 @@
+PODS:
+  - mzhurba2019 (0.1.0)
+
+DEPENDENCIES:
+  - mzhurba2019 (from `../`)
+
+EXTERNAL SOURCES:
+  mzhurba2019:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  mzhurba2019: 4e9c26731e73381be9540a75930c9f98d57edc61
+
+PODFILE CHECKSUM: a6f78d9ff48e2e6fc02c80b09fc3633c49646e41
+
+COCOAPODS: 1.8.3

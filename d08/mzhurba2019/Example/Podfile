@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'mzhurba2019_Example' do
+  pod 'mzhurba2019', :path => '../'
+
+  target 'mzhurba2019_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
