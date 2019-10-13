@@ -14,8 +14,10 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var segmentController: UISegmentedControl!
+    @IBOutlet weak var textField: UITextField!
     
     let locationManager = CLLocationManager()
+    let geoCoder = CLGeocoder()
     var route: MKRoute!
     
     override func viewDidLoad() {
@@ -25,6 +27,45 @@ class FirstViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+    }
+    
+    @IBAction func searchPlace(_ sender: Any) {
+        if (textField.text == "") {
+            displayAlert(message: "Field can not be empty")
+        } else {
+            self.geoCoder.geocodeAddressString(textField.text!) {
+                (placemarks, error) in
+                guard
+                    let placemarks = placemarks,
+                    let location = placemarks.first?.location
+                    else {
+                        self.displayAlert(message: "No destination address found")
+                        return
+                }
+                self.addAnnotation(location: location)
+            }
+        }
+    }
+    
+    @IBAction func gotoCurrentLocation(_ sender: UIButton) {
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
+            proposeSetPermission()
+        } else {
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    private func addAnnotation(location: CLLocation) {
+        mapView.removeAnnotations(mapView.annotations)
+        let pin = MKPointAnnotation()
+        pin.coordinate = location.coordinate
+        pin.title = textField.text!.lowercased().capitalized
+        pin.subtitle = "\(location.coordinate.latitude) \(location.coordinate.longitude)"
+        mapView.addAnnotation(pin)
+        let region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        mapView.setRegion(region, animated: true)
     }
     
     @IBAction func updateMapType(_ sender: UISegmentedControl) {

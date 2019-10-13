@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Map-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="First" id="9pv-A4-QxB" customClass="FirstViewController" customModule="rush01" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,9 +39,16 @@
                                     <action selector="updateMapType:" destination="9pv-A4-QxB" eventType="valueChanged" id="yXb-tx-85g"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj1-D8-f1z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj1-D8-f1z">
                                 <rect key="frame" x="369" y="768" width="30" height="30"/>
-                                <state key="normal" title="."/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7Kj-y4-HuY"/>
+                                    <constraint firstAttribute="height" constant="30" id="vkZ-UV-jD4"/>
+                                </constraints>
+                                <state key="normal" image="icons8-location-off-40"/>
+                                <connections>
+                                    <action selector="gotoCurrentLocation:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ZER-1X-sXd"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a place..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8A-KJ-ygg">
                                 <rect key="frame" x="20" y="64" width="324" height="30"/>
@@ -49,9 +56,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYn-Zm-8AO">
-                                <rect key="frame" x="358" y="64" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYn-Zm-8AO">
+                                <rect key="frame" x="378" y="66" width="26" height="26"/>
+                                <state key="normal" image="icons8-search-26">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchPlace:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Pm1-jM-VwT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,17 +85,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="icons8-map-26" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="mapView" destination="LS4-gg-lee" id="lSH-nT-3dT"/>
                         <outlet property="segmentController" destination="IQA-qa-9Mp" id="dFV-DU-x2f"/>
+                        <outlet property="textField" destination="h8A-KJ-ygg" id="Onw-gM-Yh8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Path-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController storyboardIdentifier="Second" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="rush01" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Current Location" translatesAutoresizingMaskIntoConstraints="NO" id="yp9-P5-gI5">
-                                <rect key="frame" x="0.0" y="64" width="453" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -106,7 +120,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="Destination" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-WC-Qfz">
-                                <rect key="frame" x="0.0" y="140" width="453" height="56"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -123,7 +137,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Path" image="icons8-love-path-30" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="destination" destination="UcX-WC-Qfz" id="N3J-2q-f8a"/>
                         <outlet property="source" destination="yp9-P5-gI5" id="ugF-kw-qDx"/>
@@ -153,7 +167,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="icons8-location-off-40" width="40" height="40"/>
+        <image name="icons8-love-path-30" width="30" height="30"/>
+        <image name="icons8-map-26" width="26" height="26"/>
+        <image name="icons8-search-26" width="26" height="26"/>
     </resources>
 </document>

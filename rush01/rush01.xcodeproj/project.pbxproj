@@ -39,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A9849102353380C001156B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A98491123533819001156B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A98491223533835001156B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2ABB12B623523F9000B7363F /* ViewController+Alert.swift */,
+				2ABB12A423523B0100B7363F /* FirstViewController.swift */,
+				2ABB12A623523B0100B7363F /* SecondViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		2ABB129623523B0100B7363F = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				2ABB12A223523B0100B7363F /* AppDelegate.swift */,
-				2ABB12A423523B0100B7363F /* FirstViewController.swift */,
-				2ABB12B623523F9000B7363F /* ViewController+Alert.swift */,
-				2ABB12A623523B0100B7363F /* SecondViewController.swift */,
+				2A9849102353380C001156B5 /* Model */,
+				2A98491123533819001156B5 /* View */,
+				2A98491223533835001156B5 /* Controller */,
 				2ABB12A823523B0100B7363F /* Main.storyboard */,
 				2ABB12AB23523B0100B7363F /* Assets.xcassets */,
 				2ABB12AD23523B0100B7363F /* LaunchScreen.storyboard */,
